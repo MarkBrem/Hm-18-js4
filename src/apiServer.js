@@ -1,8 +1,9 @@
 const HTTP = 'http://localhost:3000/students';
 
-export function getStudent() {
-    return fetch(`${HTTP}`)
-    .then(res=>res.json())
+export async function getStudent() {
+    const result = await fetch(`${HTTP}`)
+    const student = await result.json()
+    return student
 }
 
 const studentToAdd = {
@@ -14,7 +15,7 @@ const studentToAdd = {
     "isEnrolled": true
 }
 
-export function postStudent(newStudent) {
+export async function postStudent(newStudent) {
     const options = {
         method: 'POST',
         body: JSON.stringify(newStudent),
@@ -23,36 +24,26 @@ export function postStudent(newStudent) {
         },
     }
 
-    return fetch(`${HTTP}`, options)
-    .then(res=>res.json())
+    const result = await fetch(`${HTTP}`, options)
+    const student = await result.json()
+    return student
 }
 
 // postStudent(studentToAdd)
 
-export function deleteStudent(id){
+export async function deleteStudent(id){
     const options = {
         method: 'DELETE',
     }
 
-    return fetch(`${HTTP}/${id}`, options)
-    .then(res=>res.json())
+    const result = await fetch(`${HTTP}/${id}`, options)
+    const student = await result.json()
+    return student
 }
 
 // deleteStudent("d383")
 
-const studentToUpdate ={
-    "id": "5",
-      "name": "Mykola",
-      "age": 15,
-      "course": "Cybersecurity",
-      "skills": [
-        "Networking",
-        "Ethical Hacking",
-        "Linux"
-      ],
-      "email": "mykola.bondarenko@example.com",
-      "isEnrolled": true
-}
+
 
 export async function patchStudent(id, studentUpdate){
     const options={
@@ -62,7 +53,8 @@ export async function patchStudent(id, studentUpdate){
         "Content-Type": "application/json; charset=UTF-8",
         },
     }
-    await fetch(`${HTTP}/${id}`, options)
-    
+
+    const result = await fetch(`${HTTP}/${id}`, options)
+    const student = await result.json()
+    return student
 }
-patchStudent("5", studentToUpdate)

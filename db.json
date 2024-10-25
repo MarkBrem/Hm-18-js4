@@ -53,7 +53,7 @@
     },
     {
       "id": "5",
-      "name": "Mykola",
+      "name": "Mykolaaa",
       "age": 15,
       "course": "Cybersecurity",
       "skills": [
@@ -62,6 +62,19 @@
         "Linux"
       ],
       "email": "mykola.bondarenko@example.com",
+      "isEnrolled": true
+    },
+    {
+      "id": "205f",
+      "name": "Marko Husyanicya",
+      "age": 15,
+      "course": "FrontEnd",
+      "skills": [
+        "Networking",
+        "Ethical Hacking",
+        "Linux"
+      ],
+      "email": "mgusanica@gmail.com",
       "isEnrolled": true
     }
   ]
