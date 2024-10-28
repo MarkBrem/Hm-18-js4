@@ -76,6 +76,17 @@
       ],
       "email": "mgusanica@gmail.com",
       "isEnrolled": true
+    },
+    {
+      "id": "d578",
+      "name": "Макро Гусяниця",
+      "age": "23",
+      "course": "232",
+      "skills": [
+        "dsd"
+      ],
+      "email": "mgusanica@gmail.com",
+      "isEnrolled": true
     }
   ]
 }

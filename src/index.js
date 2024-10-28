@@ -30,9 +30,10 @@ function onSubmit(event){
       email: formEl.email.value,
       isEnrolled: formEl.isEnrolled.checked
     }
-
+    postStudent(newStudent).then(alert('Студента додано'))
     event.currentTarget.reset()
 }
+
 
 function studentList(addList){
     return addList.map((student)=>{

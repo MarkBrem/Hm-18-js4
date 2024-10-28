@@ -41,7 +41,7 @@ export async function deleteStudent(id){
     return student
 }
 
-// deleteStudent("d383")
+// deleteStudent("8947")
 
 
 
