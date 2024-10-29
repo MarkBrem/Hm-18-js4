@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Ivan Petrenko",
-      "age": 15,
+      "age": "16",
       "course": "Web Development",
       "skills": [
         "HTML",
@@ -73,17 +73,6 @@
         "Networking",
         "Ethical Hacking",
         "Linux"
-      ],
-      "email": "mgusanica@gmail.com",
-      "isEnrolled": true
-    },
-    {
-      "id": "d578",
-      "name": "Макро Гусяниця",
-      "age": "23",
-      "course": "232",
-      "skills": [
-        "dsd"
       ],
       "email": "mgusanica@gmail.com",
       "isEnrolled": true
