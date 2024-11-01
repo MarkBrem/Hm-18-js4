@@ -9,21 +9,20 @@ const list = document.querySelector('.student-list')
 const btnStudent = document.querySelector('.student-btn')
 const form = document.querySelector('form')
 
-// Елементи для модального вікна оновлення
 const modal = document.getElementById("updateModal");
 const closeModal = document.querySelector(".close");
 const updateForm = document.getElementById("updateForm");
 
-let currentStudentId = null;  // Зберігаємо ID студента, якого оновлюємо
+let currentStudentId = null;  
 
 form.addEventListener('submit', onSubmit)
 
 btnStudent.addEventListener('click', () => {
     getStudent().then(students => {
         const addStudent = studentList(students)
-        list.innerHTML = '';  // Очищуємо список перед новим рендером
+        list.innerHTML = '';  
         list.insertAdjacentHTML('beforeend', addStudent);
-        attachHandlers();  // Додаємо обробники для кнопок видалення та оновлення
+        attachHandlers(); 
     })
 })
 
@@ -41,7 +40,7 @@ function onSubmit(event) {
     }
     postStudent(newStudent).then(() => {
         alert('Студента додано');
-        btnStudent.click(); // Оновлюємо список студентів після додавання
+        btnStudent.click(); 
     });
     event.currentTarget.reset();
 }
